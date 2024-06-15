@@ -1,0 +1,11 @@
+getgenv().isRunning = true
+
+local function printMessage()
+    while getgenv().isRunning do
+        print(math.huge)
+        print(math.random)
+        wait(0.01) -- Wait for 0.01 seconds before printing again
+    end
+end
+
+coroutine.wrap(printMessage)()
